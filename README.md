@@ -1,6 +1,6 @@
 # Lesson Plan Parse MBSSE
 
-The Ministry of Basic and Senior Secondary Education (MBSSE) of Sierra Leone publishes a set of lesson plans for Maths and Language Arts on their [online knowledge platform](https://mbsseknowledgeplatform.gov.sl). The lesson plans are in pdf format, and cover all grade levels across Primary, Junior Secondary (JSS), and Senior Seconday (SSS).
+The Ministry of Basic and Senior Secondary Education (MBSSE) of Sierra Leone publishes a set of lesson plans for Maths and Language Arts on their [online knowledge platform](https://mbsseknowledgeplatform.gov.sl). The lesson plans are in pdf format, and cover all grade levels across Primary, Junior Secondary (JSS), and Senior Secondary (SSS).
 
 Here we share python code for parsing the raw text of the lesson plan pdfs into structured json and subsequently cleaning the text so that it is suitable for human consumption. We also share the following files, which are the input to and outputs from this process:
 
