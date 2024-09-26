@@ -17,17 +17,19 @@ cd INSTALL_DIR
 git clone https://github.com/AI-for-Education/lesson-plan-parse-mbsse.git
 ```
 
+This will create the folder `INSTALL_DIR/lesson-plan-parse-mbsse`, which we will now refer to as `REPO_DIR`
+
 The package can be installed into an existing python environment with:
 
 ```bash
-cd INSTALL_DIR/lesson-plan-parse-mbsse
+cd REPO_DIR
 pip install -r requirements.txt
 ```
 
 For conda users, a conda environment.yml file is also included, which can be used to create a new python environment and install the package inside it in one step.
 
 ```bash
-cd INSTALL_DIR/lesson-plan-parse-mbsse
+cd REPO_DIR
 conda env create -f environment.yml
 ```
 
@@ -43,18 +45,18 @@ where `your_api_key` is replaced with the value of your OpenAI API key.
 
 ## Step 3: Parse lesson plans
 
-The script for parsing the lesson plans is `scripts/parse_mbsseKP_lessonplans.py`. You can either run this from the command line with:
+The script for parsing the lesson plans is `REPO_DIR/scripts/parse_mbsseKP_lessonplans.py`. You can either run this from the command line with:
 
 ```bash
-python INSTALL_DIR/scripts/parse_mbsseKP_lessonplans.py
+python REPO_DIR/scripts/parse_mbsseKP_lessonplans.py
 ```
 
 or you can run it interactively in an IDE (like VSCode) to understand each of the steps.
 
-The raw text of the lesson plans will first be downloaded to `INSTALL_DIR/mbsseKP_files_lessonplans.json`, and at the end of the process `INSTALL_DIR/mbsseKP_files_lessonplans_parsed.json` will be created.
+The raw text of the lesson plans will first be downloaded to `REPO_DIR/mbsseKP_files_lessonplans.json`, and at the end of the process `REPO_DIR/mbsseKP_files_lessonplans_parsed.json` will be created.
 
 ## Step 4: Clean parsed lesson plans
 
 The parsed lesson plans produced in Step 3 are fine to use inputs to LLMs, but for human readability they suffer from a range of formatting errors resulting from the extraction of the raw text from pdf. The process of correcting these kinds of errors, and generally improving formatting overall (including inserting markdown tables, LaTeX formulae), is perfectly suited to an LLM like `gpt-4o`.
 
-The script for running this cleaning process is `scripts/parse_mbsseKP_lessonplans.py`. The ouput from this process is `INSTALL_DIR/mbsseKP_files_lessonplans_parsed.json`. This file is created at launch, and updated as the process runs. The full process over all lesson plans can be quite expensive (although prices are descreasing), so the script can be cancelled at any time and this output file supports resuming from where it left off.
+The script for running this cleaning process is `REPO_DIR/scripts/parse_mbsseKP_lessonplans.py`. The ouput from this process is `REPO_DIR/mbsseKP_files_lessonplans_parsed.json`. This file is created at launch, and updated as the process runs. The full process over all lesson plans can be quite expensive (although prices are descreasing), so the script can be cancelled at any time and this output file supports resuming from where it left off.
