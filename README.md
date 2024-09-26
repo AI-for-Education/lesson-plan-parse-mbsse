@@ -57,6 +57,6 @@ The raw text of the lesson plans will first be downloaded to `REPO_DIR/mbsseKP_f
 
 ## Step 4: Clean parsed lesson plans
 
-The parsed lesson plans produced in Step 3 are fine to use inputs to LLMs, but for human readability they suffer from a range of formatting errors resulting from the extraction of the raw text from pdf. The process of correcting these kinds of errors, and generally improving formatting overall (including inserting markdown tables, LaTeX formulae), is perfectly suited to an LLM like `gpt-4o`.
+The parsed lesson plans produced in Step 3 are fine to use as inputs to LLMs, but for human readability they suffer from a range of formatting errors resulting from the extraction of the raw text from pdf. The process of correcting these kinds of errors, and generally improving formatting overall (including inserting markdown tables, LaTeX formulae), is perfectly suited to an LLM like `gpt-4o`.
 
 The script for running this cleaning process is `REPO_DIR/scripts/parse_mbsseKP_lessonplans.py`. The ouput from this process is `REPO_DIR/mbsseKP_files_lessonplans_parsed.json`. This file is created at launch, and updated as the process runs. The full process over all lesson plans can be quite expensive (although prices are descreasing), so the script can be cancelled at any time and this output file supports resuming from where it left off.
