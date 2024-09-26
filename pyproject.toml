@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lpparse"
+version = "0.1.0"
+requires-python = "< 3.12"
+dependencies = [
+    "fabdata-llm @ git+https://github.com/AI-for-Education/fabdata-llm.git@v0.21.0",
+    "numpy == 1.26.*",
+    "tqdm == 4.*",
+    "openai == 1.45.*",
+    "pyyaml == 6.*",
+    "requests == 2.32.*",
+    "python-dotenv == 1.*",
+    "pydantic == 2.9.*",
+]
+
