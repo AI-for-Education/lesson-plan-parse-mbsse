@@ -6,7 +6,7 @@ import json
 
 import yaml
 
-from .constants import CFG_PATH, OUT_FILE
+from constants import CFG_PATH, OUT_FILE
 
 
 def download_MBSSE(cfg_path=CFG_PATH, out_file=OUT_FILE):
