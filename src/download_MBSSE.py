@@ -14,8 +14,10 @@ def download_MBSSE(cfg_path=CFG_PATH, out_file=OUT_FILE):
     with open(cfg_path) as f:
         cfg = yaml.safe_load(f)
 
+    file_path = f"{cfg['lp_path']}/{out_file.name}.gz"
+
     try:
-        response = requests.get(cfg["lp_path"])
+        response = requests.get(file_path)
     except:
         raise requests.HTTPError()
 
